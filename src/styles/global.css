@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  scroll-snap-align: start;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+
+  scroll-snap-type: y mandatory;
+}
+
+.mnt-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: translateZ(-10px) scale(2.1);
+}
+
+.one {
+  background-color: #f1f1f1;
+}
+
+.two {
+  background-color: pink;
+}
+
+.three {
+  background-color: cyan;
+}
